@@ -1,0 +1,38 @@
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    margin: 1rem;
+    width: 500px;
+
+    color: #545454;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 40px;
+
+    color: white;
+    font-size: large;
+    font-weight: 700;
+
+    background-color: #ff5533;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

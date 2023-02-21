@@ -1,0 +1,48 @@
+.card {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: 0.7.s;
+    transform-style: preserve-3d;
+
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card.is-inactive {
+    opacity: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-face {
+    position: absolute;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-size: large;
+    font-weight: 700;
+
+    background-color: #0083fc;
+    cursor: pointer;
+}
+
+.card-back-face {
+    transform: rotateY(180deg);
+}

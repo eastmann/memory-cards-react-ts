@@ -1,0 +1,23 @@
+/*
+:root {
+
+} */
+
+html, body {
+  height: 100%;
+
+  background: #e0feff;
+}
+
+* {
+  all: unset;
+  display: revert;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-primary);
+}
