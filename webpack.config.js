@@ -18,7 +18,7 @@ module.exports = {
       use: ['style-loader', 'css-loader'],
     }, {
       test: /\.svg$/,
-      type: 'asset/resource'
+      type: 'asset/inline'
     }, {
       test: /\.(ts|tsx)$/,
       use: 'ts-loader',

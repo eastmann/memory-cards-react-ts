@@ -3,31 +3,24 @@ import React from "react"
 import './Score.css'
 
 interface ScoreProps {
-    moves: number;
-    bestScore: number;
+    movesDone: number;
+    movesRemain: number;
 }
 
 export const Score: React.FC<ScoreProps> = (props: ScoreProps) => {
-    const { moves, bestScore } = props
-
-    const handleOnClick = () => {
-        window.location.reload()
-    }
+    const { movesDone, movesRemain } = props
 
     return (
         <div className="score-container">
             <div className="score">
                 <div>
-                    <span>Moves: {moves}</span>
+                    <span>Сделано ходов: </span>
+                    <span className="color-accent">{movesDone}</span>
                 </div>
-                {localStorage.getItem('bestScore') && (
-                    <div>
-                        <span>Best Score: {bestScore}</span>
-                    </div>
-                )}
-            </div>
-            <div>
-                <button onClick={handleOnClick}>Restart</button>
+                <div>
+                    <span>Осталось ходов: </span>
+                    <span className="color-accent">{movesRemain}</span>
+                </div>
             </div>
         </div>
     )

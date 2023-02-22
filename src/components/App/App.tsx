@@ -5,7 +5,7 @@ import { Board } from '../Board/Board'
 
 import './App.css'
 
-const cardIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ]
+const cardIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 cardIds.sort(() => Math.random() - 0.5)
 
 export const App = () => {
@@ -14,11 +14,19 @@ export const App = () => {
         parseInt(localStorage.getItem('bestScore') || '0')
     )
 
+    const handleOnClick = () => {
+        window.location.reload()
+    }
+
     return (
         <div className="app-container">
+            <h1>Memory</h1>
+            <div>
+                <button onClick={handleOnClick}>Restart</button>
+            </div>
             <Score
-                moves={moves}
-                bestScore={bestScore}
+                movesDone={moves}
+                movesRemain={bestScore}
             />
             <Board cardIds={cardIds}/>
         </div>

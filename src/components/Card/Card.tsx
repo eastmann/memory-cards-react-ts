@@ -15,8 +15,6 @@ interface CardProps {
 export const Card: React.FC<CardProps> = (props: CardProps) => {
     const { image, id, isInactive, isFlipped, isDisabled, onClick } = props
 
-    // const backSide = './images/back-side.png'
-
     const handleClick = () => {
         !isFlipped && !isDisabled && onClick(id)
     }
@@ -29,7 +27,6 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
         onClick={handleClick}
         >
             <div className="card-face">
-                {/* <img src={backSide} alt="Card Back" /> */}
                 <span>K/C</span>
             </div>
             <div className="card-face card-back-face">

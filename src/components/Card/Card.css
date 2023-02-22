@@ -4,18 +4,24 @@
     width: 100%;
     height: 100%;
 
-    transition: 0.7.s;
+    transition: 0.7s;
     transform-style: preserve-3d;
 
     cursor: pointer;
 }
 
 .card.is-flipped {
+    pointer-events: none;
     transform: rotateY(180deg);
 }
 
 .card.is-inactive {
     opacity: 0;
+}
+
+.card.is-disabled:not(.is-flipped) {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .card img {
@@ -39,10 +45,12 @@
     font-size: large;
     font-weight: 700;
 
-    background-color: #0083fc;
+    background-color: var(--color-primary);
     cursor: pointer;
 }
 
 .card-back-face {
+    background-color: var(--color-background);
+
     transform: rotateY(180deg);
 }
